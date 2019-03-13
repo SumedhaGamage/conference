@@ -1,0 +1,723 @@
+{
+	"info": {
+		"_postman_id": "36a19009-2b33-45b4-abf8-093d55dce6e3",
+		"name": "conference",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sessions",
+			"item": [
+				{
+					"name": "/sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/sessions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sessions"
+							]
+						},
+						"description": "get sessoins"
+					},
+					"response": []
+				},
+				{
+					"name": "/sessions/{sessionId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/sessions/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sessions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/sessions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": \"1\",\n    \"title\": \"Awesome curry rice\",\n    \"description\": \"I will talk about how awesome curry rice is.\",\n    \"isServiceSession\": false,\n    \"isPlenumSession\": false,\n    \"speakers\": [\n      \"spaker-id-123\"\n    ],\n    \"categoryItems\": [\n      \"123\"\n    ],\n    \"questionAnswers\": [\n      {\n        \"questionId\": 266,\n        \"answerValue\": \"For all beginers\"\n      }\n    ],\n    \"roomId\": 0,\n    \"englishTitle\": \"English title\",\n    \"videoUrl\": \"https://droidkaigi.jp/2019/#might_be_null\",\n    \"slideUrl\": \"https://droidkaigi.jp/2019/#might_be_null\",\n    \"interpretationTarget\": false,\n    \"message\": {\n      \"en\": \"English title\",\n      \"ja\": \"Japanese title\"\n    },\n    \"sessionType\": \"normal\",\n    \"forBeginners\": true\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/sessions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sessions"
+							]
+						},
+						"description": "post sessions"
+					},
+					"response": []
+				},
+				{
+					"name": "/sessions/proposals.json",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/sessions/proposals.json",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sessions",
+								"proposals.json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "timetable",
+			"item": [
+				{
+					"name": "/timetable",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/timetable",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"timetable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sponsers",
+			"item": [
+				{
+					"name": "/sponsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/sponsers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sponsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/sponsers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n  \"id\": 1,\n  \"url\": \"https://droidkaigi.jp/2019\",\n  \"kind\": \"platinum\",\n  \"name\": \"DroidKaigi 2019 Committee\",\n  \"image\": \"string\"\n\t\t\n\t}\n]"
+						},
+						"url": {
+							"raw": "{{url}}/sponsers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sponsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/sponser/{speakerId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/sponsers/-1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sponsers",
+								"-1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "speakers",
+			"item": [
+				{
+					"name": "/speakers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/speakers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n  \"id\": 266,\n  \"firstName\": \"Jumpei\",\n  \"lastName\": \"Matsuda\",\n  \"fullName\": \"Jumpei Matsuda\",\n  \"bio\": \"I am the author of API server and in charge of session stuff at DroidKaigi, thanks.\",\n  \"tagLine\": \"the DroidKaigi committee\",\n  \"profilePicture\": \"https://droidkaigi.jp/2019\",\n  \"isTopSpeaker\": false,\n  \"links\": [\n    \"https://droidkaigi.jp/2019\"\n  ],\n  \"sessions\": [\n    100\n  ]\n}\n]"
+						},
+						"url": {
+							"raw": "{{url}}/speakers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"speakers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/speakers/{speakerid}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/speakers/266",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"speakers",
+								"266"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "/categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/categories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": 0,\n    \"title\": \"Session format\",\n    \"items\": [\n      {\n        \"id\": 0,\n        \"name\": \"30 minutes\",\n        \"sort\": 0,\n        \"translatedName\": {\n          \"en\": \"English title\",\n          \"ja\": \"Japanese title\"\n        }\n      }\n    ],\n    \"sort\": 0,\n    \"translatedTitle\": {\n      \"en\": \"English title\",\n      \"ja\": \"Japanese title\"\n    }\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/categories/{categoryId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/categories/0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "questions",
+			"item": [
+				{
+					"name": "/questions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/questions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/questions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": 266,\n    \"question\": \"受講対象者 / Intended Audience\",\n    \"questionType\": \"Long_Text\",\n    \"sort\": 0,\n    \"translatedQuestion\": {\n      \"en\": \"English title\",\n      \"ja\": \"Japanese title\"\n    }\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/questions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/qustions/{qustionsId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/questions/266",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"questions",
+								"266"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rooms",
+			"item": [
+				{
+					"name": "/rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/rooms",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/rooms",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": 0,\n    \"name\": \"HALL A\",\n    \"sort\": 0\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/rooms",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/rooms/{roomId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/rooms/0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rooms",
+								"0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "staffs",
+			"item": [
+				{
+					"name": "/staffs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/staffs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"staffs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/staffs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": 0,\n    \"name\": \"string\",\n    \"iconUrl\": \"https://droidkaigi.jp/2019/\",\n    \"profileUrl\": \"https://droidkaigi.jp/2019/\"\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/staffs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"staffs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contributors",
+			"item": [
+				{
+					"name": "/contributors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/contributors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contributors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/contributors",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": 0,\n    \"name\": \"string\",\n    \"iconUrl\": \"https://droidkaigi.jp/2019/\",\n    \"profileUrl\": \"https://droidkaigi.jp/2019/\",\n    \"type\": \"author\"\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/contributors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contributors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "announcements",
+			"item": [
+				{
+					"name": "/announcements",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/announcements",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"announcements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/aanouncements",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": 0,\n    \"title\": \"string\",\n    \"content\": \"this is a content.\",\n    \"type\": \"alert\",\n    \"publishedAt\": \"2019-02-07T10:00:00+09:00\",\n    \"lang\": \"jp\"\n  }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/announcements",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"announcements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/announcements/{announcementId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/announcements/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"announcements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "43833c73-b060-445b-92f2-77c6efadb31a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4410b591-e6a0-46f5-af37-04c2f0c528f1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7bfeca7c-e3bb-4ed9-a33e-adc8678a5d19",
+			"key": "url",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}

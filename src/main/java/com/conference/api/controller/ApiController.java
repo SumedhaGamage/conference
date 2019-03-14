@@ -31,6 +31,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 
@@ -242,7 +243,7 @@ public class ApiController {
      * announcement controllers
      */
     @GetMapping(value="/announcements")
-    public ResponseEntity getAnnouncement() {
+    public ResponseEntity getAnnouncement(@RequestParam("language") String language) {
         return new ResponseEntity<>(annoucement.findAll(), HttpStatus.OK);
     }
     @GetMapping(value="/announcements/{announcementId}")

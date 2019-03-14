@@ -42,8 +42,10 @@ public class RepoService {
     }
 
     public Sponsers getSponsers(){
-        return new Sponsers(sponser.findAll());
+        return new Sponsers(sponser.findByKind("platinum"),
+                            sponser.findByKind("gold"),
+                            sponser.findByKind("supporter"),
+                            sponser.findByKind("tech"));
     }
 
-    
 }

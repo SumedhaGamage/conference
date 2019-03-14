@@ -27,7 +27,7 @@ public class Category {
 
     @Id
     @JsonProperty("id")
-    private Integer id;
+    private String id;
     @JsonProperty("title")
     private String title;
     @JsonProperty("items")
@@ -40,12 +40,12 @@ public class Category {
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("id")
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
     @JsonProperty("id")
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

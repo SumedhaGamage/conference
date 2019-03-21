@@ -1,7 +1,7 @@
 #!/bin/bash
 yum update -y
-docer_bin = $(which docker)
-if [[ $? != 0]]
+docker_bin=$(which docker)
+if [[ $? != 0 ]];
 then
     yum install docker
 fi
@@ -13,5 +13,5 @@ docker stack deploy -c stack.yml mongo
 #45.79.152.69
 
 yum install maven -y
-maven -DskipTests clean package docker:build
-docker run -p -d 80:8080 sgamage/api
+mvn -DskipTests clean package docker:build
+docker run -d -p 80:8080 --link mongo sgamage/api

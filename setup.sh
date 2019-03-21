@@ -13,5 +13,6 @@ yum install maven -y
 mvn -DskipTests clean package docker:build
 
 service docker start
+docker swam leave
 docker swarm init
 docker stack deploy -c stack.yml conference

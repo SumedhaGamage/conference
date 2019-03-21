@@ -1,16 +1,18 @@
-version: '3.1'
+version: "3.2"
 
 services:
   api:
     image: sgamage/api
     ports:
       - 80:8080
+    links:
+      - mongo
 
   mongo:
     image: mongo
     restart: always
     ports:
-      - 27017: 27017
+      - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
@@ -25,4 +27,7 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
   
-    
+networks:
+  conference:
+        driver: overlay
+        attachable: true  

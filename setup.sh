@@ -8,9 +8,7 @@ then
 else
     docker kill $(docker ps -q)
 fi
-#pass varko35
-#user root
-#45.79.152.69
+
 docker-compose_bin=$(/usr/local/bin/docker-compose version)
 if [[ $? != 0 ]];
 then

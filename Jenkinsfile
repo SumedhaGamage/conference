@@ -4,6 +4,10 @@ pipeline{
         stage("sandbox"){
             steps{
                 echo "========executing A========"
+                mvn {
+                    command "mvn clean package"
+                    stageName "Build"
+                }
             }
             post{
                 always{

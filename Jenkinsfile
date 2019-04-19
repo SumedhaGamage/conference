@@ -4,9 +4,7 @@ pipeline{
         stage("sandbox"){
             steps{
                 echo "========executing A========"
-                withMaven(maven : '3.6.1'){
-                    sh 'mvn -DskipTests clean compile'
-                }
+                maven 'clean compile'
             }
             post{
                 always{

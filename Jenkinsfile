@@ -1,13 +1,13 @@
 pipeline{
     agent any
+    tools {
+        maven 'apache-maven-3.0.1'
+    }
     stages{
         stage("sandbox"){
             steps{
                 echo "========executing A========"
-                mvn {
-                    command "mvn clean package"
-                    stageName "Build"
-                }
+                sh "mvn -DskipTests clean package"
             }
             post{
                 always{

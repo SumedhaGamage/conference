@@ -4,7 +4,7 @@ pipeline{
         stage("sandbox"){
             steps{
                 echo "========executing A========"
-                buildInfo = rtMaven.run pom: 'pom.xml', goals: 'clean install'
+                rtMaven.run pom: 'pom.xml', goals: 'clean install'
             }
             post{
                 always{

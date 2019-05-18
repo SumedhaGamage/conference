@@ -14,7 +14,9 @@
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 	<scm>
-		<developerConnection>scm:git:https://github.com/sumedha1101/conference/tree/master</developerConnection>
+		<connection>scm:git:git@github.com:sumedha1101/conference.git</connection>
+		<developerConnection>scm:git:git@github.com:sumedha1101/conference.git</developerConnection>
+		<url>https://github.com/sumedha1101/conference</url>
 	</scm>
 
 	<properties>

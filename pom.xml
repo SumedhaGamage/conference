@@ -77,7 +77,7 @@
 				<allowTimestampedSnapshots>true</allowTimestampedSnapshots>
 				<preparationGoals>package</preparationGoals>
 				<tagNameFormat>@{project.version}-RC</tagNameFormat>
-				<tagBase>scm:git:https://github.com/sumedha1101/conference/tree/develop</tagBase>
+				<tagBase>https://github.com/sumedha1101/conference/tree/develop</tagBase>
 			</configuration>
 		</plugin>
 		</plugins>

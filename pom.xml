@@ -14,7 +14,7 @@
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 	<scm>
-		<developerConnection>scm:git:https://github.com/sumedha1101/conference</developerConnection>
+		<developerConnection>scm:git:https://github.com/sumedha1101/conference/master</developerConnection>
 		<tag>1.0.0-RC</tag>
 	</scm>
 
@@ -73,6 +73,7 @@
 			<version>2.5.3</version>
 			<configuration>
 				<tagNameFormat>@{project.version}-RC</tagNameFormat>
+				<tagBase>scm:git:https://github.com/sumedha1101/conference/master</tagBase>
 			</configuration>
 		</plugin>
 		</plugins>

@@ -1,9 +1,12 @@
 pipeline{
     agent any
     stages{
-        stage("sandbox"){
+        stage("master"){
             steps{
                 echo "========executing A========"
+                sh "mvn clean package"
+                sh "mvn release:prepare"
+                sh "mvn release:perform"
             }
             post{
                 always{
@@ -17,33 +20,5 @@ pipeline{
                 }
             }
         }
-        stage("dev"){
-            steps{
-                echo "====++++executing dev++++===="
-            }
-            post{
-                always{
-                    echo "====++++always++++===="
-                }
-                success{
-                    echo "====++++dev executed succesfully++++===="
-                }
-                failure{
-                    echo "====++++dev execution failed++++===="
-                }
-        
-            }
-        }
-    }
-    post{
-        always{
-            echo "========always========"
-        }
-        success{
-            echo "========pipeline executed successfully ========"
-        }
-        failure{
-            echo "========pipeline execution failed========"
-        }
-    }
+
 }

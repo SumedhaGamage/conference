@@ -4,20 +4,14 @@ pipeline {
         stage("master") {
             steps {
                 echo "========executing A========"
-                sh "mvn clean package"
-                sh "mvn release:prepare"
-                sh "mvn release:perform"
+                sh "mvn -DskipTests clean package"
             }
-            post {
-                always {
-                    echo "========always========"
-                }
-                success {
-                    echo "========A executed successfully========"
-                }
-                failure {
-                    echo "========A execution failed========"
-                }
+        }
+        stage("deploy") {
+            steps {
+                echo "========executing release========"
+                sh "mvn -DskipTests release:prepare"
+                sh "mvn -DskipTests release:perform"
             }
         }
 

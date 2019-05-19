@@ -1,24 +1,25 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage("master"){
-            steps{
+    stages {
+        stage("master") {
+            steps {
                 echo "========executing A========"
                 sh "mvn clean package"
                 sh "mvn release:prepare"
                 sh "mvn release:perform"
             }
-            post{
-                always{
+            post {
+                always {
                     echo "========always========"
                 }
-                success{
+                success {
                     echo "========A executed successfully========"
                 }
-                failure{
+                failure {
                     echo "========A execution failed========"
                 }
             }
         }
 
+    }
 }
